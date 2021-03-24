@@ -1,4 +1,4 @@
-package com.xcxcxz.first.doamin;
+package com.xcxcxz.first.domain;
 
 import java.sql.Timestamp;
 

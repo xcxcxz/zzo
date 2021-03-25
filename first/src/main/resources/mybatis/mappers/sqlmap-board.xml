@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="boardDAO">
+<mapper namespace="com.xcxcxz.firstpro.boardDAO">
 	<select id="list" resultType="bddo">
 		SELECT * FROM BOARD
 		ORDER BY seq
@@ -12,7 +12,7 @@
 		BOARD WHERE seq = #{seq}
 	</select>
 	
-	<insert id="insert" parameterType="boardVO">
+	<insert id="insert" parameterType="com.xcxcxz.firstpro.dao.BoardVO">
 		INSERT INTO BOARD
 		(seq, title, content, writer, password, regDate, cnt)
 		VALUES
@@ -22,7 +22,7 @@
 		</selectKey>
 	</insert>
 	
-	<update id="update" parameterType="boardVO">
+	<update id="update" parameterType="com.xcxcxz.firstpro.dao.BoardVO">
 		UPDATE BOARD SETtitle = #{title},
 		content = #{content},
 		writer = #{writer}
@@ -32,7 +32,7 @@
 		UPDATE BOARD SET cnt = cnt + 1 WHERE seq = #{seq}
 	</update>
 	
-	<delete id="delete" parameterType="boardVO">
+	<delete id="delete" parameterType="com.xcxcxz.firstpro.dao.BoardVO">
 		DELETE FROM BOARD WHERE seq = #{seq}
 		AND password = #{password}
 	</delete>

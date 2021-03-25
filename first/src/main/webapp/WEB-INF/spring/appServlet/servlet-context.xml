@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.xcxcxz.first" />
+	<context:component-scan base-package="com.xcxcxz.firstpro" />
 	
 	
 	

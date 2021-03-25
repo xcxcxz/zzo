@@ -30,7 +30,7 @@
 	<!-- SqlSessionFactory 설정 - 위의 dataSource객체를 사용하여 데이터베이스 접속 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation" value="classpath:/mybatis/mybatis-config.xml"/>
+		<property name="configLocation" value="classpath:mybatis/mappers/mybatis-config.xml"/>
 		<property name="mapperLocations" value="classpath:mybatis/mappers/**/*.xml"/>
 	</bean>
 	<!-- SqlSessionFactory 설정 - 위의 dataSource객체를 사용하여 데이터베이스 접속 -->
@@ -38,4 +38,5 @@
 <bean id="selSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
+	
 </beans>
